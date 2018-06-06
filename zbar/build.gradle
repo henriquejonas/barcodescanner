@@ -13,3 +13,12 @@ dependencies {
     compile libraries.barcodescanner_core
     compile fileTree(dir: 'libs', include: '*.jar')
 }
+
+android {
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+}
+
+
